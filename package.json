@@ -1,0 +1,23 @@
+{
+  "name": "quietchat",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Локальный обмен зашифрованными текстом, изображениями и голосом",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "npm run build && node scripts/serve.mjs",
+    "preview": "node scripts/serve.mjs",
+    "test": "node --test tests/*.test.js",
+    "test:browser": "playwright test",
+    "check": "npm test && npm run build && npm run test:browser"
+  },
+  "dependencies": {
+    "libsodium-wrappers-sumo": "0.8.4"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.0",
+    "esbuild": "0.28.2"
+  },
+  "engines": { "node": ">=22" }
+}
